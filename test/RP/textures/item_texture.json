@@ -1,0 +1,12 @@
+{
+	"resource_pack_name": "test",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bridge_second_weapon": {
+			"textures": "textures/3Ditems/second_weapon/m1917"
+		},
+		"bridge_first_weapon": {
+			"textures": "textures/3Ditems/first_weapon/ak47"
+		}
+	}
+}

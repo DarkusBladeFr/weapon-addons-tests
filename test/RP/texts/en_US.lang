@@ -1,0 +1,6 @@
+item.spawn_egg.entity.bridge:skeleton.name=Spawn skeleton
+entity.bridge:skeleton.name=skeleton
+
+item.bridge:projectile=bullet
+
+entity.bridge:thrown_projectile.name=bullet

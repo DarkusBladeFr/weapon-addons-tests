@@ -1,0 +1,28 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bridge:ak47"
+        },
+        "components": {
+            "minecraft:cooldown": {
+                "category": "ak47",
+                "duration": 0.04
+            },
+            "minecraft:display_name": {
+                "value": "ak47"
+            },
+            "minecraft:icon": {
+                "texture": "bridge_first_weapon"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_duration": 3600,
+            "minecraft:hand_equipped": true,
+            "tag:is_gun": {},
+            "tag:is_ar": {},
+            "tag:is_heavy": {},
+            "tag:allow_sight": {},
+            "tag:allow_silencer": {}
+        }
+    }
+}

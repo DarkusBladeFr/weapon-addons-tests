@@ -1,0 +1,49 @@
+{
+	"type": "minecraftBedrock",
+	"name": "myTest",
+	"namespace": "bridge",
+	"authors": [
+		"DarkusBlade_Fr"
+	],
+	"targetVersion": "1.19.50",
+	"description": "experience",
+	"experimentalGameplay": {
+		"holidayCreatorFeatures": true,
+		"creationOfCustomBiomes": true,
+		"upcomingCreatorFeatures": true,
+		"enableGameTestFramework": true,
+		"experimentalMolangFeatures": true,
+		"educationEdition": true
+	},
+	"bdsProject": false,
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "test"
+				}
+			]
+		]
+	},
+	"bridge": {
+		"darkTheme": "bridge.easterEgg.dark_halloween",
+		"lightTheme": "bridge.easterEgg.light_halloween"
+	}
+}
