@@ -4,3 +4,4 @@ entity.bridge:skeleton.name=skeleton
 item.bridge:projectile=bullet
 
 entity.bridge:thrown_projectile.name=bullet
+item.bridge:test=test

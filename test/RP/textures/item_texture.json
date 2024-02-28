@@ -5,8 +5,8 @@
 		"bridge_second_weapon": {
 			"textures": "textures/3Ditems/second_weapon/m1917"
 		},
-		"bridge_first_weapon": {
-			"textures": "textures/3Ditems/first_weapon/ak47"
+		"bridge_test": {
+			"textures": "textures/items/test"
 		}
 	}
 }

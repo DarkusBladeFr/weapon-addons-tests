@@ -9,14 +9,12 @@
                 "texture": "bridge_second_weapon"
             },
             "minecraft:max_stack_size": 1,
-            "minecraft:durability": {
-                "max_durability": 8
-            },
             "minecraft:display_name": {
                 "value": "m1917"
             },
-            "minecraft:use_duration": 20,
             "minecraft:hover_text_color": "white",
+            "minecraft:can_destroy_in_creative": false,
+            "minecraft:use_duration": 3600,
             "minecraft:chargeable": {}
         }
     }
