@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "bridge:bullet",
+            "materials": {
+                "default": "charged_creeper"
+            },
+            "textures": {
+                "default": "textures/entity/arrows"
+            },
+            "geometry": {
+                "default": "geometry.bullet"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

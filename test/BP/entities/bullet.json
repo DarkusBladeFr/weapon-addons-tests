@@ -1,0 +1,116 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "bridge:bullet",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"bridge:shot": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": true
+						},
+						"stick_in_ground": {
+							"shake_time": 0.1
+						}
+					},
+					"power": 8,
+					"gravity": 0.02,
+					"inertia": 2,
+					"liquid_inertia": 2,
+					"uncertainty_base": 0.08,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.05,
+						0.05
+					],
+					"multiple_targets": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"projectile",
+					"bullet"
+				]
+			},
+			"minecraft:mark_variant": {
+				"value": 0
+			},
+			"minecraft:scale": {
+				"value": 0.4
+			},
+			"minecraft:collision_box": {
+				"width": 0.01,
+				"height": 0.01
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"big_dripleaf",
+					"cocoa",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"cave_vines",
+					"cave_vines_body_with_berries",
+					"cave_vines_head_with_berries",
+					"glass",
+					"glass_pane",
+					"lantern",
+					"lit_pumpkin",
+					"melon_block",
+					"pumpkin",
+					"standing_sign",
+					"small_dripleaf_block",
+					"tinted_glass",
+					"turtle_egg",
+					"vine",
+					"wall_banner",
+					"wall_sign",
+					"web",
+					"wheat",
+					"waterlily"
+				]
+			},
+			"minecraft:tick_world": {
+				"distance_to_players": 128,
+				"never_despawn": false,
+				"radius": 2
+			},
+			"minecraft:despawn": {
+				"despawn_from_distance": {}
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 7,
+					"use_motion_prediction_hints": true
+				}
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"bridge:shot": {
+				"add": {
+					"component_groups": [
+						"bridge:shot"
+					]
+				}
+			}
+		}
+	}
+}

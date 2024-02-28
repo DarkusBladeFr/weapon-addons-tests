@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "bridge:m1917",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/3Ditems/second_weapon/m1917"
+			},
+			"geometry": {
+				"default": "geometry.m1917"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

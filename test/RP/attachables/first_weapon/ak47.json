@@ -1,0 +1,22 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "bridge:ak47",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/3Ditems/first_weapon/ak47"
+            },
+            "geometry": {
+                "default": "geometry.ak47"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.default": false
+                }
+            ]
+        }
+    }
+}

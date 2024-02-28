@@ -1,0 +1,114 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.player.ak47": {
+			"initial_state": "inactive",
+			"states": {
+				"inactive": {
+					"on_entry": [
+						"@s bridge:remove_reloading"
+					],
+					"transitions": [
+						{
+							"fire": "q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') && q.is_using_item && q.scoreboard('ak47') >= 1 && !q.property('bridge:reloading')"
+						},
+						{
+							"reload": "q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') && q.is_using_item && q.scoreboard('ak47') <= 0 && !q.property('bridge:reloading')"
+						}
+					]
+				},
+				"fire": {
+					"on_entry": [
+						"/function guns/fire/ak47"
+					],
+					"transitions": [
+						{
+							"inactive": "!q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') || !q.is_using_item"
+						},
+						{
+							"fire_delay": "q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') && q.is_using_item"
+						}
+					]
+				},
+				"fire_delay": {
+					"on_entry": [
+						"v.gun_delay = q.life_time;"
+					],
+					"on_exit": [
+						"v.gun_delay = 0;"
+					],
+					"transitions": [
+						{
+							"inactive": "!q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') || !q.is_using_item"
+						},
+						{
+							"inactive": "(q.life_time - v.gun_delay) >= 0.007"
+						}
+					]
+				},
+				"reload": {
+					"on_entry": [
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=0}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=1}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=2}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=3}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=4}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=5}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=6}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=7}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=8}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=9}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=10}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=11}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=12}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=13}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=14}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=15}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=16}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=17}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=18}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=19}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=20}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=21}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=22}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=23}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=24}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=25}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=26}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=27}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=28}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=29}, tag=!reloading] run event entity @s bridge:add_reloading",
+						"/execute as @s[hasitem={item=bridge:ak47_mag, data=30}, tag=!reloading] run event entity @s bridge:add_reloading"
+					],
+					"on_exit": [
+						"v.reload_time = q.life_time;"
+					],
+					"transitions": [
+						{
+							"inactive": "!q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') || !q.is_using_item"
+						},
+						{
+							"reload_delay": "q.life_time - v.reload_time >= 1.5"
+						}
+					]
+				},
+				"reload_delay": {
+					"on_entry": [
+						"v.reload_delay = q.life_time;"
+					],
+					"transitions": [
+						{
+							"inactive": "!q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') || !q.is_using_item"
+						},
+						{
+							"inactive": "q.is_item_name_any('slot.weapon.mainhand', 'bridge:ak47') && !q.is_using_item"
+						},
+						{
+							"inactive": "(q.life_time - v.reload_delay) >= 0.7"
+						}
+					]
+				}
+			}
+		}
+	}
+}

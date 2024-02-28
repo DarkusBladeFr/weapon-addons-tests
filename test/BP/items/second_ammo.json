@@ -1,0 +1,20 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bridge:second_ammo",
+            "menu_category": {
+                "category": "equipment",
+                "group": "Bullets"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "second_ammo"
+            },
+            "minecraft:icon": {
+                "texture": "arrow"
+            }
+        }
+    }
+}
